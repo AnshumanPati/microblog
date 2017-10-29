@@ -24,7 +24,7 @@ class EditForm(Form):
             return True
         user = User.query.filter_by(nickname=self.nickname.data).first()
         if user is not None:
-            self.nickname.errors.append('This nickname is already in use. '
+            self.nickname.errors.append('Sorry! This nickname is already in use. '
                                         'Please choose another one.')
-            
+            return False
         return True
