@@ -26,5 +26,5 @@ class EditForm(Form):
         if user is not None:
             self.nickname.errors.append('This nickname is already in use. '
                                         'Please choose another one.')
-            return False
+            
         return True
